@@ -37,21 +37,33 @@
     "*.d.ts"
   ],
   "scripts": {
-    "prepare": "node ./scripts/prebundle.js && yarn dtsbundle",
-    "dtsbundle": "dts-bundle-generator --no-banner -o ./dist/ts3.9/index.d.ts ./src/index.ts"
+    "dtsbundle": "dts-bundle-generator --config dtsconfig.js",
+    "prepare": "node ./scripts/prebundle.js && yarn dtsbundle"
   },
   "dependencies": {
-    "@popperjs/core": "^2.6.0",
-    "@storybook/client-logger": "6.5.0-alpha.3",
+    "@emotion/core": "^10.3.1",
+    "@emotion/styled": "^10.0.27",
     "@storybook/csf": "0.0.2--canary.87bc651.0",
     "@storybook/theming": "6.5.0-alpha.3",
+    "core-js": "^3.8.2"
+  },
+  "devDependencies": {
+    "@popperjs/core": "^2.6.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@storybook/client-logger": "6.5.0-alpha.3",
     "@types/color-convert": "^2.0.0",
     "@types/overlayscrollbars": "^1.12.0",
     "@types/react-syntax-highlighter": "11.0.5",
     "color-convert": "^2.0.1",
-    "core-js": "^3.8.2",
+    "css": "^3.0.0",
+    "dts-bundle-generator": "^6.2.0",
     "fast-deep-equal": "^3.1.3",
     "global": "^4.4.0",
+    "jest": "^26.6.3",
     "lodash": "^4.17.21",
     "markdown-to-jsx": "^7.1.3",
     "memoizerific": "^1.11.3",
@@ -63,20 +75,10 @@
     "react-syntax-highlighter": "^13.5.3",
     "react-textarea-autosize": "^8.3.0",
     "regenerator-runtime": "^0.13.7",
+    "rollup": "^2.60.2",
+    "rollup-plugin-jsx": "^1.0.3",
     "ts-dedent": "^2.0.0",
     "util-deprecate": "^1.0.2"
-  },
-  "devDependencies": {
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.3.0",
-    "css": "^3.0.0",
-    "dts-bundle-generator": "^6.2.0",
-    "jest": "^26.6.3",
-    "rollup": "^2.60.2",
-    "rollup-plugin-jsx": "^1.0.3"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",

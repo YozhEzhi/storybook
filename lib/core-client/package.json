@@ -37,9 +37,9 @@
     "*.d.ts"
   ],
   "scripts": {
+    "dtsbundle": "dts-bundle-generator --config dtsconfig.js",
     "oldprepare": "node ../../scripts/prepare.js",
-    "prepare": "node ./scripts/prebundle.js && yarn dtsbundle",
-    "dtsbundle": "dts-bundle-generator --no-banner -o ./dist/ts3.9/index.d.ts ./src/index.ts"
+    "prepare": "node ./scripts/prebundle.js && yarn dtsbundle"
   },
   "dependencies": {
     "@storybook/addons": "6.5.0-alpha.3",
