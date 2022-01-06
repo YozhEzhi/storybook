@@ -1,5 +1,5 @@
+import type { Addon, StoryApi } from '@storybook/addons';
 import type {
-  Addon,
   StoryId,
   StoryName,
   StoryKind,
@@ -8,12 +8,13 @@ import type {
   Parameters,
   Args,
   ArgTypes,
-  StoryApi,
   DecoratorFunction,
   LoaderFunction,
   StoryContext,
-} from '@storybook/addons';
-import type { AnyFramework, StoryIdentifier, ProjectAnnotations } from '@storybook/csf';
+  AnyFramework,
+  StoryIdentifier,
+  ProjectAnnotations,
+} from '@storybook/csf';
 import type { StoryStore, HooksContext, RenderContext } from '@storybook/store';
 
 export type {
